@@ -62,7 +62,7 @@
                         </a>
 
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                            <li><a class="dropdown-item" href="#">View & Edit Members</a></li>
+                            <li><a class="dropdown-item" href="members/members_page.php">View & Edit Members</a></li>
                             <li><a class="dropdown-item" href="#">Register New Member</a></li>
                         </ul>
                     </div>

@@ -66,16 +66,24 @@
 
 /* Basic Page Stiles */
 .basic_page_headline h5{
-    background-color: #375263;
-    color: #FFFFFF;
-    width: 400px;
+    /* background-color: #375263;
+    color: #FFFFFF; */
+    color: #375263;
     font-size: 1.5rem;
+    font-weight: 700;
     text-align: center;
     padding: 15px 0px;
     margin: 10px auto;
-    border-radius: 5px;
 }
-
+.title_bar{
+    background-color: #375263;
+}
+.title_bar_body .dashboard_body_single .dropdown-toggle{
+    border: none !important;
+    background-color: #375263;
+    color: #FFFFFF;
+    font-weight: 500;
+}
 /* FOOTER SECTION STYLES */
 .presented_by{
     margin-top: 150px;
