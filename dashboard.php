@@ -21,7 +21,7 @@
 <body>
     <nav class="navbar-content text-center">
         <div class="nav_image container text-center">
-            <a href="../home_page.php"><img src="../assets/images/record-book_title.png" alt="" class="img_fluid"></a>
+            <a href="home_page.php"><img src="assets/images/record-book_title.png" alt="" class="img_fluid"></a>
         </div>
     </nav>
 
@@ -38,8 +38,8 @@
                         </a>
 
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="resource/resource_page.php">View All Resources</a></li>
+                            <li><a class="dropdown-item" href="resource/add-new.php">Add New Resource</a></li>
                         </ul>
                     </div>
                 </div>
