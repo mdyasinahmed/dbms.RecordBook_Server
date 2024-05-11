@@ -1,0 +1,9 @@
+/* NAVBAR SECTION STYLES */
+.nav_image {
+    padding: 20px 0px;
+    text-align: center !important;
+}
+.nav_image img{
+    margin: 20px 0px;
+    height: 80px;
+}
