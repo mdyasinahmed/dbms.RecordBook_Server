@@ -4,6 +4,83 @@
     text-align: center !important;
 }
 .nav_image img{
-    margin: 20px 0px;
+    margin: 10px 0px;
     height: 80px;
+}
+
+
+.my_button {
+    background-color: #AE2255 !important;
+    color: #FFFFFF;
+    border: 2px solid #AE2255;
+    padding: 10px 40px;
+    margin: 20px;
+    margin-left: 0px !important;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.my_button:hover {
+    background-color: #FFFFFF !important;
+    color: #AE2255;
+    border: 2px solid #AE2255;
+}
+
+/* Welcome Section  */
+.welcome_section{
+    padding: 130px 10px;
+}
+.home_text{
+    margin-bottom: 50px;
+    color: #375263;
+}
+.home_text h2 {
+    font-weight: 700;
+}
+.home_text h5 {
+    font-weight: 700;
+}
+
+
+/* DASHBOARD STYLES */
+.dashboard_headline h3{
+    color: #AE2255 !important;
+}
+
+
+.dashboard_body_single .dropdown-toggle{
+    border: 1px solid #AE2255 !important;
+}
+.dashboard_body_single .dropdown a{
+    padding: 10px 50px !important;
+    font-size: 18px !important;
+    background-color: #FFFFFF;
+    color: #AE2255;
+    border: none;
+}
+.dashboard_body_single .dropdown a:hover{
+    background-color: #AE2255;
+    color: #FFFFFF;
+    border: none;
+}
+
+/* Basic Page Stiles */
+.basic_page_headline h5{
+    background-color: #375263;
+    color: #FFFFFF;
+    width: 400px;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 15px 0px;
+    margin: 10px auto;
+    border-radius: 5px;
+}
+
+/* FOOTER SECTION STYLES */
+.presented_by{
+    margin-top: 150px;
+}
+
+.footer_image img{
+    height: 65px;
 }
