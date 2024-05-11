@@ -40,8 +40,8 @@ include "../db_conn.php";
                                 </a>
 
                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                    <li><a class="dropdown-item" href="resource_page.php">View All Resources</a></li>
-                                    <li><a class="dropdown-item" href="add-new.php">Add New Resources</a></li>
+                                    <li><a class="dropdown-item" href="../resource/resource_page.php">View All Resources</a></li>
+                                    <li><a class="dropdown-item" href="../resource/add-new.php">Add New Resources</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -97,12 +97,10 @@ include "../db_conn.php";
                 <thead class="table-dark">
                     <tr>
                         <th scope="col">Borrow ID</th>
-                        <th scope="col">Resource Title</th>
-                        <th scope="col">Borrower Name</th>
-                        <th scope="col">Borrower Phone</th>
+                        <th scope="col">Resource ID</th>
+                        <th scope="col">Member's ID</th>
                         <th scope="col">Borrow Date</th>
                         <th scope="col">Return Date</th>
-                        <th scope="col">Publishing Date</th>
                         <th scope="col">Action(Edit/Delete)</th>
                     </tr>
                 </thead>
@@ -114,9 +112,8 @@ include "../db_conn.php";
                     ?>
                     <tr>
                         <td><?php echo $row["borrow_id"] ?></td>
-                        <td><?php echo $row["resource_title"] ?></td>
-                        <td><?php echo $row["borrower_name"] ?></td>
-                        <td><?php echo $row["borrower_phone"] ?></td>
+                        <td><?php echo $row["resource_id"] ?></td>
+                        <td><?php echo $row["patron_id"] ?></td>
                         <td><?php echo $row["borrow_date"] ?></td>
                         <td><?php echo $row["return_date"] ?></td>
                         <td>

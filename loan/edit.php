@@ -1,6 +1,6 @@
 <?php
 include "../db_conn.php";
-$resource_id = $_GET["resource_id"];
+$borrow_id = $_GET["borrow_id"];
 
 if (isset($_POST["submit"])) {
   $category = $_POST['category'];
@@ -11,12 +11,12 @@ if (isset($_POST["submit"])) {
   $publishing_date = $_POST['publishing_date'];
   $edition = $_POST['edition'];
 
-  $sql = "UPDATE `resource` SET `category`='$category',`collection_date`='$collection_date',`title`='$title',`author`='$author',`publisher_name`='$publisher_name',`publishing_date`='$publishing_date',`edition`='$edition' WHERE resource_id = $resource_id";
+  $sql = "UPDATE `loan` SET `category`='$category',`collection_date`='$collection_date',`title`='$title',`author`='$author',`publisher_name`='$publisher_name',`publishing_date`='$publishing_date',`edition`='$edition' WHERE borrow_id = $borrow_id";
 
   $result = mysqli_query($conn, $sql);
 
   if ($result) {
-    header("Location: resource_page.php?msg=Data updated successfully");
+    header("Location: loan_page.php?msg=Data updated successfully");
   } else {
     echo "Failed: " . mysqli_error($conn);
   }
@@ -44,7 +44,7 @@ if (isset($_POST["submit"])) {
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  <title>PHP resource Application</title>
+  <title>PHP loan Application</title>
 </head>
 
 <body>
@@ -60,12 +60,12 @@ if (isset($_POST["submit"])) {
                 <div class="dashboard_body_single">
                     <div class="dropdown">
                         <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-                            Library Resources
+                            Library loans
                         </a>
 
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                            <li><a class="dropdown-item" href="resource_page.php">View All Resources</a></li>
-                            <li><a class="dropdown-item" href="add-new.php">Add New Resource</a></li>
+                            <li><a class="dropdown-item" href="loan_page.php">View All loans</a></li>
+                            <li><a class="dropdown-item" href="add-new.php">Add New loan</a></li>
                         </ul>
                     </div>
                 </div>
@@ -104,12 +104,12 @@ if (isset($_POST["submit"])) {
   <section class="edit_members mb-4">
     <div class="container">
       <div class="text-center mb-4">
-        <h3>Edit Library Resources</h3>
+        <h3>Edit Library loans</h3>
         <p class="text-muted">Click update after changing any information</p>
       </div>
 
       <?php
-      $sql = "SELECT * FROM `resource` WHERE resource_id = $resource_id LIMIT 1";
+      $sql = "SELECT * FROM `loan` WHERE loan_id = $loan_id LIMIT 1";
       $result = mysqli_query($conn, $sql);
       $row = mysqli_fetch_assoc($result);
       ?>
@@ -153,7 +153,7 @@ if (isset($_POST["submit"])) {
 
           <div>
             <button type="submit" class="btn btn-success" name="submit">Update</button>
-            <a href="resource_page.php" class="btn btn-danger">Cancel</a>
+            <a href="loan_page.php" class="btn btn-danger">Cancel</a>
           </div>
         </form>
       </div>

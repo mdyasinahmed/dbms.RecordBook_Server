@@ -4,12 +4,12 @@ include "../db_conn.php";
 if (isset($_POST["submit"])) {
    $resource_id = $_POST['resource_id'];
    // From Query
-   $resource_title = "SELECT `title` FROM `resource` WHERE `loan.resource_id`=`resource.resource_id`";
+   $resource_title = "INSERT `title` FROM `loan`,`resource` WHERE `loan.resource_id`=`resource.resource_id`";
    $patron_id = $_POST['patron_id'];
    // From Query
-   $borrower_name = "SELECT `name` FROM `patron` WHERE `loan.patron_id`=`patron.patron_id`";
+   $borrower_name = "INSERT `name` FROM `loan`,`patron` WHERE `loan.patron_id`=`patron.patron_id`";
    // From Query
-   $borrower_phone = "SELECT `phone` FROM `patron` WHERE `loan.patron_id`=`patron.patron_id`";
+   $borrower_phone = "INSERT `phone` FROM `loan`, `patron` WHERE `loan.patron_id`=`patron.patron_id`";
    $borrow_date = $_POST['borrow_date'];
    $return_date = $_POST['return_date'];
 
