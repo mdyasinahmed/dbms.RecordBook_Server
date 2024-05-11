@@ -2,20 +2,23 @@
 include "../db_conn.php";
 
 if (isset($_POST["submit"])) {
-   $category = $_POST['category'];
-   $collection_date = $_POST['collection_date'];
-   $title = $_POST['title'];
-   $author = $_POST['author'];
-   $publisher_name = $_POST['publisher_name'];
-   $publishing_date = $_POST['publishing_date'];
-   $edition = $_POST['edition'];
+   $resource_id = $_POST['resource_id'];
+   // From Query
+   $resource_title = "SELECT `title` FROM `resource` WHERE `loan.resource_id`=`resource.resource_id`";
+   $patron_id = $_POST['patron_id'];
+   // From Query
+   $borrower_name = "SELECT `name` FROM `patron` WHERE `loan.patron_id`=`patron.patron_id`";
+   // From Query
+   $borrower_phone = "SELECT `phone` FROM `patron` WHERE `loan.patron_id`=`patron.patron_id`";
+   $borrow_date = $_POST['borrow_date'];
+   $return_date = $_POST['return_date'];
 
-   $sql = "INSERT INTO `resource`(`resource_id`, `category`, `collection_date`, `title`, `author`, `publisher_name`,`publishing_date`, `edition`) VALUES (NULL,'$category','$collection_date','$title','$author', '$publisher_name', '$publishing_date', '$edition')";
+   $sql = "INSERT INTO `loan`(`borrow_id`, `resource_id`,`resource_title`,`patron_id`,`borrower_name`,`borrower_phone`, `borrow_date`, `return_date`) VALUES (NULL,'$resource_id','$resource_title','$patron_id','$borrower_name', '$borrower_phone', '$borrow_date', '$return_date')";
 
    $result = mysqli_query($conn, $sql);
 
    if ($result) {
-      header("Location: resource_page.php?msg=New record created successfully");
+      header("Location: loan_page.php?msg=New record created successfully");
    } else {
       echo "Failed: " . mysqli_error($conn);
    }
@@ -105,50 +108,35 @@ if (isset($_POST["submit"])) {
    <section class="register_member mb-5">
       <div class="container">
          <div class="text-center mb-4">
-            <h3>Add New Resource</h3>
-            <p class="text-muted">Complete the form below to add a new resource</p>
+            <h3>Entry New Loan</h3>
+            <p class="text-muted">Complete the form below to add a new loan</p>
          </div>
 
          <div class="container d-flex justify-content-center">
             <form action="" method="post" style="width:50vw; min-width:300px;">
                <div class="col mb-3">
-                  <label class="form-label">Category</label>
-                  <input type="text" class="form-control" name="category" placeholder="books/magazines/papers">
-               </div>
-               
-               <div class="col mb-3">
-                  <label class="form-label">Collection Date</label>
-                  <input type="date" class="form-control" name="collection_date" placeholder="Collection Date">
-               </div>
-               
-               <div class="col mb-3">
-                  <label class="form-label">Title</label>
-                  <input type="text" class="form-control" name="title" placeholder="Name of Resource">
-               </div>
-               
-               <div class="col mb-3">
-                  <label class="form-label">Author</label>
-                  <input type="text" class="form-control" name="author" placeholder="Author's Name">
+                  <label class="form-label">Resource ID</label>
+                  <input type="number" class="form-control" name="resource_id" placeholder="1">
                </div>
 
                <div class="col mb-3">
-                  <label class="form-label">Publisher Name</label>
-                  <input type="text" class="form-control" name="publisher_name" placeholder="Publication Name">
+                  <label class="form-label">Patron ID</label>
+                  <input type="number" class="form-control" name="patron_id" placeholder="1">
+               </div>
+               
+               <div class="col mb-3">
+                  <label class="form-label">Borrow Date</label>
+                  <input type="date" class="form-control" name="borrow_date" placeholder="Borrow Date">
                </div>
 
                <div class="mb-3">
-                  <label class="form-label">Publishing Date</label>
-                  <input type="date" class="form-control" name="publishing_date" placeholder="Date of Publishing">
-               </div>
-
-               <div class="mb-4">
-                  <label class="form-label">Edition</label>
-                  <input type="number" class="form-control" name="edition" placeholder="00">
+                  <label class="form-label">Return Date</label>
+                  <input type="date" class="form-control" name="return_date" placeholder="Return Date">
                </div>
 
                <div>
                   <button type="submit" class="btn btn-success" name="submit">Save</button>
-                  <a href="resource_page.php" class="btn btn-danger">Cancel</a>
+                  <a href="loan_page.php" class="btn btn-danger">Cancel</a>
                </div>
             </form>
          </div>
