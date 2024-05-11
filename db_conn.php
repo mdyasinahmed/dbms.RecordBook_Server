@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "php-crud";
+$dbname = "dbms_recordbook";
 
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, $dbname);

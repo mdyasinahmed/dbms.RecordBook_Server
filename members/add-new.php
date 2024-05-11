@@ -2,12 +2,12 @@
 include "../db_conn.php";
 
 if (isset($_POST["submit"])) {
-   $first_name = $_POST['first_name'];
-   $last_name = $_POST['last_name'];
+   $name = $_POST['name'];
+   $department = $_POST['department'];
    $email = $_POST['email'];
-   $gender = $_POST['gender'];
+   $phone = $_POST['phone'];
 
-   $sql = "INSERT INTO `crud`(`id`, `first_name`, `last_name`, `email`, `gender`) VALUES (NULL,'$first_name','$last_name','$email','$gender')";
+   $sql = "INSERT INTO `patron`(`patron_id`, `name`, `department`, `email`, `phone`) VALUES (NULL,'$name','$department','$email','$phone')";
 
    $result = mysqli_query($conn, $sql);
 
@@ -43,10 +43,10 @@ if (isset($_POST["submit"])) {
 
 <body>
    <nav class="navbar-content text-center">
-        <div class="nav_image container text-center">
-        <img src="../assets/images/record-book_title.png" alt="" class="img_fluid">
-        </div>
-    </nav>
+      <div class="nav_image container text-center">
+         <a href="../home_page.php"><img src="../assets/images/record-book_title.png" alt="" class="img_fluid"></a>
+      </div>
+   </nav>
     <section class="title_bar text-center">
             <div class="title_bar_body container">
                 <div class="row m-4">
@@ -110,12 +110,12 @@ if (isset($_POST["submit"])) {
             <form action="" method="post" style="width:50vw; min-width:300px;">
                <div class="col mb-3">
                   <label class="form-label">Name:</label>
-                  <input type="text" class="form-control" name="first_name" placeholder="Member's full name">
+                  <input type="text" class="form-control" name="name" placeholder="Member's full name">
                </div>
 
                <div class="col mb-3">
                   <label class="form-label">Department:</label>
-                  <input type="text" class="form-control" name="last_name" placeholder="Member's Department Name">
+                  <input type="text" class="form-control" name="department" placeholder="Member's Department Name">
                </div>
 
                <div class="mb-3">
@@ -125,12 +125,12 @@ if (isset($_POST["submit"])) {
 
                <div class="mb-4">
                   <label class="form-label">Contact No.</label>
-                  <input type="text" class="form-control" name="gender" placeholder="01234567890">
+                  <input type="text" class="form-control" name="phone" placeholder="01234567890">
                </div>
 
                <div>
                   <button type="submit" class="btn btn-success" name="submit">Save</button>
-                  <a href="index.php" class="btn btn-danger">Cancel</a>
+                  <a href="members_page.php" class="btn btn-danger">Cancel</a>
                </div>
             </form>
          </div>

@@ -19,11 +19,11 @@
 </head>
 
 <body>
-  <nav class="navbar-content text-center">
-    <div class="nav_image container text-center">
-      <img src="assets/images/record-book_title.png" alt="" class="img_fluid">
-    </div>
-  </nav>
+    <nav class="navbar-content text-center">
+        <div class="nav_image container text-center">
+            <a href="../home_page.php"><img src="../assets/images/record-book_title.png" alt="" class="img_fluid"></a>
+        </div>
+    </nav>
 
     <div class="container">
         <div class="dashboard_inner_body p-5">
@@ -63,7 +63,7 @@
 
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                             <li><a class="dropdown-item" href="members/members_page.php">View & Edit Members</a></li>
-                            <li><a class="dropdown-item" href="#">Register New Member</a></li>
+                            <li><a class="dropdown-item" href="members/add-new.php">Register New Member</a></li>
                         </ul>
                     </div>
                 </div>

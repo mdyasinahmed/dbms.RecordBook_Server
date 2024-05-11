@@ -1,7 +1,7 @@
 <?php
 include "../db_conn.php";
-$id = $_GET["id"];
-$sql = "DELETE FROM `crud` WHERE id = $id";
+$patron_id = $_GET["patron_id"];
+$sql = "DELETE FROM `patron` WHERE patron_id = $patron_id";
 $result = mysqli_query($conn, $sql);
 
 if ($result) {

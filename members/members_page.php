@@ -2,7 +2,6 @@
 include "../db_conn.php";
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,7 +25,7 @@ include "../db_conn.php";
 <body>
     <nav class="navbar-content text-center">
         <div class="nav_image container text-center">
-        <img src="../assets/images/record-book_title.png" alt="" class="img_fluid">
+        <a href="../home_page.php"><img src="../assets/images/record-book_title.png" alt="" class="img_fluid"></a>
         </div>
     </nav>
     <main>
@@ -107,19 +106,19 @@ include "../db_conn.php";
                 </thead>
                 <tbody>
                     <?php
-                    $sql = "SELECT * FROM `crud`";
+                    $sql = "SELECT * FROM `patron`";
                     $result = mysqli_query($conn, $sql);
                     while ($row = mysqli_fetch_assoc($result)) {
                     ?>
                     <tr>
-                        <td><?php echo $row["id"] ?></td>
-                        <td><?php echo $row["first_name"] ?></td>
-                        <td><?php echo $row["last_name"] ?></td>
+                        <td><?php echo $row["patron_id"] ?></td>
+                        <td><?php echo $row["name"] ?></td>
+                        <td><?php echo $row["department"] ?></td>
                         <td><?php echo $row["email"] ?></td>
-                        <td><?php echo $row["gender"] ?></td>
+                        <td><?php echo $row["phone"] ?></td>
                         <td>
-                        <a href="edit.php?id=<?php echo $row["id"] ?>" class="link-dark"><i class="fa-solid fa-pen-to-square fs-5 me-3"></i></a>
-                        <a href="delete.php?id=<?php echo $row["id"] ?>" class="link-dark"><i class="fa-solid fa-trash fs-5"></i></a>
+                        <a href="edit.php?patron_id=<?php echo $row["patron_id"] ?>" class="link-dark"><i class="fa-solid fa-pen-to-square fs-5 me-3"></i></a>
+                        <a href="delete.php?patron_id=<?php echo $row["patron_id"] ?>" class="link-dark"><i class="fa-solid fa-trash fs-5"></i></a>
                         </td>
                     </tr>
                     <?php

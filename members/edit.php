@@ -1,14 +1,14 @@
 <?php
 include "../db_conn.php";
-$id = $_GET["id"];
+$patron_id = $_GET["patron_id"];
 
 if (isset($_POST["submit"])) {
-  $first_name = $_POST['first_name'];
-  $last_name = $_POST['last_name'];
+  $name = $_POST['name'];
+  $department = $_POST['department'];
   $email = $_POST['email'];
-  $gender = $_POST['gender'];
+  $phone = $_POST['phone'];
 
-  $sql = "UPDATE `crud` SET `first_name`='$first_name',`last_name`='$last_name',`email`='$email',`gender`='$gender' WHERE id = $id";
+  $sql = "UPDATE `patron` SET `name`='$name',`department`='$department',`email`='$email',`phone`='$phone' WHERE patron_id = $patron_id";
 
   $result = mysqli_query($conn, $sql);
 
@@ -41,13 +41,13 @@ if (isset($_POST["submit"])) {
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  <title>PHP CRUD Application</title>
+  <title>PHP patron Application</title>
 </head>
 
 <body>
   <nav class="navbar-content text-center">
       <div class="nav_image container text-center">
-      <img src="../assets/images/record-book_title.png" alt="" class="img_fluid">
+      <a href="../home_page.php"><img src="../assets/images/record-book_title.png" alt="" class="img_fluid"></a>
       </div>
   </nav>
   <section class="title_bar text-center">
@@ -106,7 +106,7 @@ if (isset($_POST["submit"])) {
       </div>
 
       <?php
-      $sql = "SELECT * FROM `crud` WHERE id = $id LIMIT 1";
+      $sql = "SELECT * FROM `patron` WHERE patron_id = $patron_id LIMIT 1";
       $result = mysqli_query($conn, $sql);
       $row = mysqli_fetch_assoc($result);
       ?>
@@ -116,12 +116,12 @@ if (isset($_POST["submit"])) {
           <div class="row mb-3">
             <div class="col">
               <label class="form-label">Member's Name</label>
-              <input type="text" class="form-control" name="first_name" value="<?php echo $row['first_name'] ?>">
+              <input type="text" class="form-control" name="name" value="<?php echo $row['name'] ?>">
             </div>
 
             <div class="col">
               <label class="form-label">Department</label>
-              <input type="text" class="form-control" name="last_name" value="<?php echo $row['last_name'] ?>">
+              <input type="text" class="form-control" name="department" value="<?php echo $row['department'] ?>">
             </div>
           </div>
 
@@ -132,7 +132,7 @@ if (isset($_POST["submit"])) {
 
           <div class="mb-3">
             <label class="form-label">Contact No</label>
-            <input type="text" class="form-control" name="gender" value="<?php echo $row['gender'] ?>">
+            <input type="text" class="form-control" name="phone" value="<?php echo $row['phone'] ?>">
           </div>
 
 
