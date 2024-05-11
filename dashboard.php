@@ -50,8 +50,8 @@
                         </a>
 
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="loan/loan_page.php">View Loan Information</a></li>
+                            <li><a class="dropdown-item" href="loan/add-new.php">Entry New Loan</a></li>
                         </ul>
                     </div>
                 </div>
