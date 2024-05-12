@@ -71,11 +71,11 @@ if (isset($_POST["submit"])) {
                         <div class="dashboard_body_single">
                             <div class="dropdown">
                                 <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Member's Portals
+                                    Loan Information
                                 </a>
 
                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                    <li><a class="dropdown-item" href="#">View & Edit Members</a></li>
+                                    <li><a class="dropdown-item" href="../loan/loan_page.php">View Loan Information</a></li>
                                     <li><a class="dropdown-item" href="#">Register New Member</a></li>
                                 </ul>
                             </div>
