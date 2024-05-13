@@ -44,8 +44,11 @@ Potential additions will be made from time to time. Additions like fine manageme
 ![Dashboard](https://raw.githubusercontent.com/mdyasinahmed/dbms.RecordBook_Server/main/bin/DBMS%20Project%20Screenshots/delete.png)
 
 ### Database View
-#### Records Of Members
-![Dashboard](https://raw.githubusercontent.com/mdyasinahmed/dbms.RecordBook_Server/main/bin/DBMS%20Project%20Screenshots/store%20data%20in%20database.png)
+#### Records Of Members'
+![members-table](https://raw.githubusercontent.com/mdyasinahmed/dbms.RecordBook_Server/main/bin/DBMS%20Project%20Screenshots/store%20data%20in%20database.png)
+
+#### Records Of Resources
+![resources-table](https://github.com/mdyasinahmed/dbms.RecordBook_Server/blob/main/bin/DBMS%20Project%20Screenshots/resource_table.png)
 
 We welcome contributions from the community to make this project better! Whether you're a developer, designer, tester, or just have an idea, we'd love to hear from you. Here's how you can contribute:
 
