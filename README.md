@@ -46,3 +46,13 @@ Potential additions will be made from time to time. Additions like fine manageme
 #### Records Of Members
 ![Dashboard](https://raw.githubusercontent.com/mdyasinahmed/dbms.RecordBook_Server/main/bin/DBMS%20Project%20Screenshots/store%20data%20in%20database.png)
 
+We welcome contributions from the community to make this project better! Whether you're a developer, designer, tester, or just have an idea, we'd love to hear from you. Here's how you can contribute:
+
+1. Fork the repository and clone it locally.
+2. Create a new branch for your feature or bug fix.
+3. Make your changes and ensure the code lints.
+4. Test your changes thoroughly.
+5. Submit a pull request detailing your changes and explaining why they're needed.
+
+If you have any questions or need help getting started, feel free to reach out to us for more information.
+
