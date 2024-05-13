@@ -1,6 +1,6 @@
 # RecordBook - The Database Management System Of MU's Library
 
-## About
+## About RecordBook
 This project is based on the Library Management System of the Metropolitan University. This will help the librarian to efficiently handle the data and resources of the library by keeping track of the members, loaned resources, and others.
 Potential additions will be made from time to time. Additions like fine managements, user accounts, requesting resources, and many more.
 
