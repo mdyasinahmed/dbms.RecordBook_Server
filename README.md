@@ -1,6 +1,7 @@
-# RecordBook - The Database Management System Of MU's Library
+# RecordBook
+### The Database Management System Of Metropolitan University Library
 
-## About
+## About RecordBook
 This project is based on the Library Management System of the Metropolitan University. This will help the librarian to efficiently handle the data and resources of the library by keeping track of the members, loaned resources, and others.
 Potential additions will be made from time to time. Additions like fine managements, user accounts, requesting resources, and many more.
 
@@ -21,5 +22,38 @@ Potential additions will be made from time to time. Additions like fine manageme
 - HTML | CSS | Bootstrap
 - PHP & MySQL
 
-## User View
-![HOME Page]([https://drive.google.com/file/d/11lQir655E8v97Hm1DEKA39SlFPKfFwUs/view?usp=drive_link])
+
+## Project Views
+### User View
+#### HOME Page
+![Home Page](https://raw.githubusercontent.com/mdyasinahmed/dbms.RecordBook_Server/main/bin/DBMS%20Project%20Screenshots/home_page.png)
+
+#### DASHBOARD
+![Dashboard](https://raw.githubusercontent.com/mdyasinahmed/dbms.RecordBook_Server/main/bin/DBMS%20Project%20Screenshots/dashboard.png)
+
+#### Fields For CREATE Data
+![Dashboard](https://raw.githubusercontent.com/mdyasinahmed/dbms.RecordBook_Server/main/bin/DBMS%20Project%20Screenshots/create.png)
+
+#### Output After Creating Data (READ Data)
+![Dashboard](https://raw.githubusercontent.com/mdyasinahmed/dbms.RecordBook_Server/main/bin/DBMS%20Project%20Screenshots/read-and-insert.png)
+
+#### UPDATE Data Fields
+![Dashboard](https://raw.githubusercontent.com/mdyasinahmed/dbms.RecordBook_Server/main/bin/DBMS%20Project%20Screenshots/update.png)
+
+#### Data DELETE
+![Dashboard](https://raw.githubusercontent.com/mdyasinahmed/dbms.RecordBook_Server/main/bin/DBMS%20Project%20Screenshots/delete.png)
+
+### Database View
+#### Records Of Members
+![Dashboard](https://raw.githubusercontent.com/mdyasinahmed/dbms.RecordBook_Server/main/bin/DBMS%20Project%20Screenshots/store%20data%20in%20database.png)
+
+We welcome contributions from the community to make this project better! Whether you're a developer, designer, tester, or just have an idea, we'd love to hear from you. Here's how you can contribute:
+
+1. Fork the repository and clone it locally.
+2. Create a new branch for your feature or bug fix.
+3. Make your changes and ensure the code lints.
+4. Test your changes thoroughly.
+5. Submit a pull request detailing your changes and explaining why they're needed.
+
+If you have any questions or need help getting started, feel free to reach out to us for more information.
+
