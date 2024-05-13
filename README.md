@@ -22,4 +22,4 @@ Potential additions will be made from time to time. Additions like fine manageme
 - PHP & MySQL
 
 ## User View
-![HOME Page]([https://github.com/mdyasinahmed/dbms.RecordBook_Server/blob/main/bin/DBMS%20Project%20Screenshots/home_page.png])
+![Home Page](https://raw.githubusercontent.com/mdyasinahmed/dbms.RecordBook_Server/main/bin/DBMS%20Project%20Screenshots/home_page.png)
