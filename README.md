@@ -21,10 +21,28 @@ Potential additions will be made from time to time. Additions like fine manageme
 - HTML | CSS | Bootstrap
 - PHP & MySQL
 
-## User View
-### HOME Page
+
+## Project Views
+### User View
+#### HOME Page
 ![Home Page](https://raw.githubusercontent.com/mdyasinahmed/dbms.RecordBook_Server/main/bin/DBMS%20Project%20Screenshots/home_page.png)
 
-### DASHBOARD
+#### DASHBOARD
 ![Dashboard](https://raw.githubusercontent.com/mdyasinahmed/dbms.RecordBook_Server/main/bin/DBMS%20Project%20Screenshots/dashboard.png)
+
+#### Fields For CREATE Data
+![Dashboard](https://raw.githubusercontent.com/mdyasinahmed/dbms.RecordBook_Server/main/bin/DBMS%20Project%20Screenshots/create.png)
+
+#### Output After Creating Data (READ Data)
+![Dashboard](https://raw.githubusercontent.com/mdyasinahmed/dbms.RecordBook_Server/main/bin/DBMS%20Project%20Screenshots/read-and-insert.png)
+
+#### UPDATE Data Fields
+![Dashboard](https://raw.githubusercontent.com/mdyasinahmed/dbms.RecordBook_Server/main/bin/DBMS%20Project%20Screenshots/update.png)
+
+#### Data DELETE
+![Dashboard](https://raw.githubusercontent.com/mdyasinahmed/dbms.RecordBook_Server/main/bin/DBMS%20Project%20Screenshots/delete.png)
+
+### Database View
+#### Records Of Members
+![Dashboard](https://raw.githubusercontent.com/mdyasinahmed/dbms.RecordBook_Server/main/bin/DBMS%20Project%20Screenshots/store%20data%20in%20database.png)
 
