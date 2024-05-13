@@ -18,5 +18,8 @@ Potential additions will be made from time to time. Additions like fine manageme
 
 ## Technologies Used
 - Figma
-- HTML, CSS, Bootstrap
+- HTML | CSS | Bootstrap
 - PHP & MySQL
+
+## User View
+![HOME Page]([https://example.com/screenshot1.png](https://drive.google.com/file/d/11lQir655E8v97Hm1DEKA39SlFPKfFwUs/view?usp=drive_link))
