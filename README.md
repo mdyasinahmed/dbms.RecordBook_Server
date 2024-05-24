@@ -32,16 +32,16 @@ Potential additions will be made from time to time. Additions like fine manageme
 ![Dashboard](https://raw.githubusercontent.com/mdyasinahmed/dbms.RecordBook_Server/main/bin/DBMS%20Project%20Screenshots/dashboard.png)
 
 #### Fields For CREATE Data
-![Dashboard](https://raw.githubusercontent.com/mdyasinahmed/dbms.RecordBook_Server/main/bin/DBMS%20Project%20Screenshots/create.png)
+![Data Entry Fields](https://raw.githubusercontent.com/mdyasinahmed/dbms.RecordBook_Server/main/bin/DBMS%20Project%20Screenshots/create.png)
 
 #### Output After Creating Data (READ Data)
-![Dashboard](https://raw.githubusercontent.com/mdyasinahmed/dbms.RecordBook_Server/main/bin/DBMS%20Project%20Screenshots/read-and-insert.png)
+![Data Showing](https://raw.githubusercontent.com/mdyasinahmed/dbms.RecordBook_Server/main/bin/DBMS%20Project%20Screenshots/read-and-insert.png)
 
 #### UPDATE Data Fields
-![Dashboard](https://raw.githubusercontent.com/mdyasinahmed/dbms.RecordBook_Server/main/bin/DBMS%20Project%20Screenshots/update.png)
+![Update of Data](https://raw.githubusercontent.com/mdyasinahmed/dbms.RecordBook_Server/main/bin/DBMS%20Project%20Screenshots/update.png)
 
 #### Data DELETE
-![Dashboard](https://raw.githubusercontent.com/mdyasinahmed/dbms.RecordBook_Server/main/bin/DBMS%20Project%20Screenshots/delete.png)
+![Data Deletition](https://raw.githubusercontent.com/mdyasinahmed/dbms.RecordBook_Server/main/bin/DBMS%20Project%20Screenshots/delete.png)
 
 ### Database View
 #### Records Of Members'
