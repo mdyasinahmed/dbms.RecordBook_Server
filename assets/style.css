@@ -87,6 +87,11 @@
     color: #FFFFFF;
     font-weight: 500;
 }
+
+.table-dark {
+    background-color: #AE2255;
+}
+
 /* FOOTER SECTION STYLES */
 .presented_by{
     margin-top: 150px;

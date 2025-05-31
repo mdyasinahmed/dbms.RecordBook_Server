@@ -25,7 +25,7 @@ include "../db_conn.php";
 <body>
     <nav class="navbar-content text-center">
         <div class="nav_image container text-center">
-        <a href="../home_page.php"><img src="../assets/images/record-book_title.png" alt="" class="img_fluid"></a>
+        <a href="../index.html"><img src="../assets/images/record-book_title.png" alt="" class="img_fluid"></a>
         </div>
     </nav>
     <main>

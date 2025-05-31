@@ -3,28 +3,62 @@ include "../db_conn.php";
 
 if (isset($_POST["submit"])) {
    $resource_id = $_POST['resource_id'];
-   // From Query
-   $resource_title = "INSERT `title` FROM `loan`,`resource` WHERE `loan.resource_id`=`resource.resource_id`";
    $patron_id = $_POST['patron_id'];
-   // From Query
-   $borrower_name = "INSERT `name` FROM `loan`,`patron` WHERE `loan.patron_id`=`patron.patron_id`";
-   // From Query
-   $borrower_phone = "INSERT `phone` FROM `loan`, `patron` WHERE `loan.patron_id`=`patron.patron_id`";
    $borrow_date = $_POST['borrow_date'];
    $return_date = $_POST['return_date'];
 
-   $sql = "INSERT INTO `loan`(`borrow_id`, `resource_id`,`resource_title`,`patron_id`,`borrower_name`,`borrower_phone`, `borrow_date`, `return_date`) VALUES (NULL,'$resource_id','$resource_title','$patron_id','$borrower_name', '$borrower_phone', '$borrow_date', '$return_date')";
+   // Check if the patron exists
+   $patron_check = mysqli_query($conn, "SELECT name, phone FROM patron WHERE patron_id = $patron_id");
+   if (mysqli_num_rows($patron_check) == 0) {
+      header("Location: loan_page.php?msg=Member not Registered!");
+      exit();
+   }
+
+   // Check if the resource exists
+   $resource_check = mysqli_query($conn, "SELECT title FROM resource WHERE resource_id = $resource_id");
+   if (mysqli_num_rows($resource_check) == 0) {
+      header("Location: loan_page.php?msg=Resource not found!");
+      exit();
+   }
+
+   // Get member and resource data
+   $patron_data = mysqli_fetch_assoc($patron_check);
+   $borrower_name = $patron_data['name'];
+   $borrower_phone = $patron_data['phone'];
+
+   $resource_data = mysqli_fetch_assoc($resource_check);
+   $resource_title = $resource_data['title'];
+
+   // Insert into loan table
+   $sql = "INSERT INTO loan (
+               borrow_id,
+               resource_id,
+               resource_title,
+               patron_id,
+               borrower_name,
+               borrower_phone,
+               borrow_date,
+               return_date
+           ) VALUES (
+               NULL,
+               '$resource_id',
+               '$resource_title',
+               '$patron_id',
+               '$borrower_name',
+               '$borrower_phone',
+               '$borrow_date',
+               '$return_date'
+           )";
 
    $result = mysqli_query($conn, $sql);
 
    if ($result) {
       header("Location: loan_page.php?msg=New record created successfully");
    } else {
-      echo "Failed: " . mysqli_error($conn);
+      header("Location: loan_page.php?msg=Failed to insert data: " . mysqli_error($conn));
    }
 }
 ?>
-
 
 
 <!DOCTYPE html>
@@ -50,7 +84,7 @@ if (isset($_POST["submit"])) {
 <body>
    <nav class="navbar-content text-center">
       <div class="nav_image container text-center">
-         <a href="../home_page.php"><img src="../assets/images/record-book_title.png" alt="" class="img_fluid"></a>
+         <a href="../index.html"><img src="../assets/images/record-book_title.png" alt="" class="img_fluid"></a>
       </div>
    </nav>
     <section class="title_bar text-center">
