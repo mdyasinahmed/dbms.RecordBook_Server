@@ -1,28 +1,61 @@
 <?php
 include "../db_conn.php";
-$resource_id = $_GET["resource_id"];
+
+// Validate and sanitize resource_id
+if (!isset($_GET["resource_id"]) || !is_numeric($_GET["resource_id"])) {
+    die("Invalid resource ID.");
+}
+$resource_id = intval($_GET["resource_id"]);
 
 if (isset($_POST["submit"])) {
-  $category = $_POST['category'];
-  $collection_date = $_POST['collection_date'];
-  $title = $_POST['title'];
-  $author = $_POST['author'];
-  $publisher_name = $_POST['publisher_name'];
-  $publishing_date = $_POST['publishing_date'];
-  $edition = $_POST['edition'];
+    $category = $_POST['category'];
+    $collection_date = $_POST['collection_date'];
+    $title = $_POST['title'];
+    $author = $_POST['author'];
+    $publisher_name = $_POST['publisher_name'];
+    $publishing_date = $_POST['publishing_date'];
+    $edition = $_POST['edition'];
 
-  $sql = "UPDATE `resource` SET `category`='$category',`collection_date`='$collection_date',`title`='$title',`author`='$author',`publisher_name`='$publisher_name',`publishing_date`='$publishing_date',`edition`='$edition' WHERE resource_id = $resource_id";
+    $sql = "UPDATE `resource` SET 
+        `category` = ?, 
+        `collection_date` = ?, 
+        `title` = ?, 
+        `author` = ?, 
+        `publisher_name` = ?, 
+        `publishing_date` = ?, 
+        `edition` = ? 
+        WHERE `resource_id` = ?";
 
-  $result = mysqli_query($conn, $sql);
+    $stmt = mysqli_prepare($conn, $sql);
+    mysqli_stmt_bind_param($stmt, "ssssssii", 
+        $category, 
+        $collection_date, 
+        $title, 
+        $author, 
+        $publisher_name, 
+        $publishing_date, 
+        $edition, 
+        $resource_id
+    );
 
-  if ($result) {
-    header("Location: resource_page.php?msg=Data updated successfully");
-  } else {
-    echo "Failed: " . mysqli_error($conn);
-  }
+    if (mysqli_stmt_execute($stmt)) {
+        header("Location: resource_page.php?msg=Data updated successfully");
+        exit;
+    } else {
+        echo "Update failed: " . mysqli_error($conn);
+    }
 }
 
+// Fetch data for editing
+$sql = "SELECT * FROM `resource` WHERE `resource_id` = $resource_id LIMIT 1";
+$result = mysqli_query($conn, $sql);
+$row = mysqli_fetch_assoc($result);
+
+if (!$row) {
+    die("Resource not found.");
+}
 ?>
+
 
 
 
