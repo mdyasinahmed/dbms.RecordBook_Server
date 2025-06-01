@@ -127,6 +127,13 @@ include "../db_conn.php";
                 </tbody>
             </table>
         </section>
+        <!-- Top Buttons -->
+        <div class="top_buttons">
+            <ul>
+                <li><a href="https://recordbook.great-site.net/index.html">Home</a></li>
+                <li><a href="https://recordbook.great-site.net/dashboard.html">Dashboard</a></li>
+            </ul>
+        </div>
     </main>
     <footer class="d-none">
         <section class="presented_by">
